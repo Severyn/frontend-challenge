@@ -1,0 +1,32 @@
+{
+  "scripts": {
+    "dev": "npm run server:dev",
+    "prod": "npm run build && npm run server:prod",
+    "build": "vite build",
+    "build:ssg:prod": "vite build --mode production && vite build --ssr --mode production && vike prerender",
+    "server:dev": "node ./server",
+    "server:prod": "cross-env NODE_ENV=production node ./server"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vue/compiler-sfc": "^3.3.10",
+    "@vue/server-renderer": "^3.3.10",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2",
+    "preline": "^2.0.3",
+    "sirv": "^2.0.3",
+    "swiper": "^11.0.6",
+    "vike": "^0.4.161",
+    "vite": "^5.0.10",
+    "vue": "^3.3.10",
+    "vue-draggable-next": "^2.2.1"
+  },
+  "type": "module",
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  }
+}
